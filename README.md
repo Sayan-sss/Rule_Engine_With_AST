@@ -18,6 +18,10 @@ This project implements a rule evaluation engine using AST (Abstract Syntax Tree
 - **Express for Backend**: Manages API requests for creating and evaluating rules.
 - **MongoDB**: Stores all the created rules and allows for dynamic querying during rule evaluations.
 
+## Preview
+You can view the live app here:  
+[Rule Engine with AST - Hosted on Render](https://rule-engine-with-ast-frontend.onrender.com/)
+
 ## Installation
 
 ### Prerequisites
