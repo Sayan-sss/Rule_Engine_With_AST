@@ -28,7 +28,8 @@ function App() {
   const fetchRules = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/rules"
+        "http://rule-engine-with-ast-backend-ten.vercel.app
+/api/rules"
       );
       console.log("Fetched rules:", response.data.rules); // Log the response
       setRules(response.data.rules);
@@ -45,7 +46,8 @@ function App() {
 
     try {
       console.log(JSON.stringify(data));
-      await axios.post("http://localhost:5000/create-rule", {
+      await axios.post("http://rule-engine-with-ast-backend-ten.vercel.app
+/create-rule", {
         rule: ruleString,
       });
       setMessage("Rule created successfully!");
@@ -64,7 +66,8 @@ function App() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/evaluate-rule", 
+        "http://rule-engine-with-ast-backend-ten.vercel.app
+/evaluate-rule", 
         {
           ruleId: selectedRuleId,
           data: {
@@ -90,7 +93,8 @@ function App() {
   async function evaluateAllRules(data) {
     try {
       const response = await fetch(
-       "http://localhost:5000/evaluate-all-rules",
+       "http://rule-engine-with-ast-backend-ten.vercel.app
+/evaluate-all-rules",
         {
           method: "POST",
           headers: {
