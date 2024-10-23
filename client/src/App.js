@@ -28,7 +28,7 @@ function App() {
   const fetchRules = async () => {
     try {
       const response = await axios.get(
-        `${import.meta.env.REACT_APP_API_URL}/api/rules`
+        "http://localhost:5000/api/rules"
       );
       console.log("Fetched rules:", response.data.rules); // Log the response
       setRules(response.data.rules);
@@ -45,7 +45,7 @@ function App() {
 
     try {
       console.log(JSON.stringify(data));
-      await axios.post(`${import.meta.env.REACT_APP_API_URL}/create-rule`, {
+      await axios.post("http://localhost:5000/create-rule", {
         rule: ruleString,
       });
       setMessage("Rule created successfully!");
@@ -64,7 +64,7 @@ function App() {
 
     try {
       const response = await axios.post(
-        `${import.meta.env.REACT_APP_API_URL}/evaluate-rule`, // Remove the "/api" part
+        "http://localhost:5000/evaluate-rule", 
         {
           ruleId: selectedRuleId,
           data: {
@@ -90,7 +90,7 @@ function App() {
   async function evaluateAllRules(data) {
     try {
       const response = await fetch(
-        `${import.meta.env.REACT_APP_API_URL}/evaluate-all-rules`,
+       "http://localhost:5000/evaluate-all-rules",
         {
           method: "POST",
           headers: {
